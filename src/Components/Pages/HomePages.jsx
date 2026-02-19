@@ -1,5 +1,6 @@
 import Garment from '../HomePages/Garment'
 import HomePage from '../HomePages/HomePage'
+import Perfume from '../HomePages/Perfume'
 import Signature from '../HomePages/Signature'
 import SigProduct from '../HomePages/SigProduct'
 
@@ -10,6 +11,7 @@ const HomePages = () => {
         <Signature/>
         <SigProduct/>
         <Garment/>
+        <Perfume/>
     </div>
   )
 }

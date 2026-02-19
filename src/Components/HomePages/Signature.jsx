@@ -3,7 +3,7 @@ import React from "react";
 const Signature = () => {
   return (
     <div className="h-[30vh] w-full flex justify-center items-center  bg-[#fefcfa] flex-col gap-5">
-      <h1 className="text-2xl md:text-5xl font-light font-monoCustom text-center">
+      <h1 className="text-2xl md:text-5xl font-light font-monoCustom text-center animate-fadeIn">
         Signature Lines
       </h1>
 

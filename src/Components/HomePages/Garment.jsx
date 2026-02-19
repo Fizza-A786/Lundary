@@ -1,11 +1,9 @@
 import React from "react";
-import { MdArrowForwardIos } from "react-icons/md";
 
 const Garment = () => {
   return (
     <div className="bg-white py-20">
 
-      {/* Heading Section */}
       <div className="h-[30vh] w-full flex justify-center items-center flex-col gap-5">
         <h1 className="text-2xl md:text-5xl font-bold font-monoCustom text-center">
           How Would You Like It Washed?
@@ -15,11 +13,7 @@ const Garment = () => {
           CHOOSE YOUR EXPERIENCE
         </div>
       </div>
-
-      {/* Cards Section */}
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-10 px-4">
-
-        {/* Card 1 */}
         <div className="w-[500px] h-[280px] bg-[#f5e1da] rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
           <div>
             <div className="text-3xl mb-5">🧼</div>
@@ -52,11 +46,9 @@ const Garment = () => {
         </div>
 
       </div>
-
-      {/* View More Button */}
       <div className="flex justify-center mt-12 ">
         <button className="group bg-[#e1b933] text-black px-5 py-4 rounded-full
-          flex items-center gap-2 transition-all duration-500 hover:scale-105 ">
+          flex items-center gap-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl ">
        Continue to Garment Selection
         </button>
       </div>
