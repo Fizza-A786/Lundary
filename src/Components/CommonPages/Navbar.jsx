@@ -25,17 +25,17 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navbarBg =
-    windowWidth < 768
-      ? "bg-[#2d2d2d65]" 
-      : scrolled
-        ? "bg-[#2d2d2d65] shadow-lg border-b border-white/20"
-        : "bg-transparent"; 
+ const navbarBg =
+  windowWidth < 768
+    ? "bg-black/30 backdrop-blur-md"
+    : scrolled
+      ? "bg-black/25 backdrop-blur-md shadow-md "
+      : "bg-transparent";
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-16 h-20 transition-all duration-500 ${navbarBg}`}
+        className={`fixed top-0 left-0 w-full border-b border-white/5 z-50 flex  items-center justify-between px-6 lg:px-16 h-20 transition-all duration-500 ${navbarBg}`}
       >
         <div className="h-16 w-16 flex items-center justify-center">
           <img
@@ -65,7 +65,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="hidden md:flex gap-4">
-          <button className="text-white border border-[#e4bc3b] px-4 py-2 rounded-full hover:bg-[#faf9f840] transition-all hover:scale-105 duration-300">
+          <button className="text-white border border-white/30 px-4 py-2 rounded-full hover:bg-[#faf9f840] transition-all hover:scale-105 duration-300">
             Client Login
           </button>
           <button className="bg-[#e4bc3b] px-4 py-2 rounded-full text-black hover:bg-[#ba9b35] transition-all hover:scale-105 duration-300">
