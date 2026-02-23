@@ -51,9 +51,11 @@ const Navbar = () => {
               Home
             </li>
           </Link>
+          <Link to="/Services">
           <li className="text-[16px] text-white hover:text-[#e4bc3b] transition-all duration-300 hover:scale-105">
             Services
           </li>
+          </Link>
           <li className="text-[16px] text-white hover:text-[#e4bc3b] transition-all uration-300 hover:scale-105">
             About
           </li>

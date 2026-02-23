@@ -1,4 +1,6 @@
+import BlackPage from '../HomePages/BlackPage'
 import FinalTouch from '../HomePages/FinalTouch'
+import Footer from '../HomePages/Footer'
 import Garment from '../HomePages/Garment'
 import HomePage from '../HomePages/HomePage'
 import Perfume from '../HomePages/Perfume'
@@ -16,6 +18,8 @@ const HomePages = () => {
         <Perfume/>
         <FinalTouch/>
         <Working/>
+        <BlackPage/>
+        {/* <Footer/> */}
     </div>
   )
 }
