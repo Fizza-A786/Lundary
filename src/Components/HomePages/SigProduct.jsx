@@ -77,7 +77,7 @@ const SigProduct = () => {
                 <button
                   className="group mt-6 bg-[#d4af37] text-black py-2 px-7 rounded-full 
                   hover:bg-black hover:text-amber-400
-                  transition-all duration-500 flex items-center gap-2 w-fit"
+                  transition-all duration-500 flex items-center gap-2 w-fit  cursor-pointer"
                 >
                   {card.buttonText}
                   <MdArrowForwardIos className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
@@ -92,7 +92,7 @@ const SigProduct = () => {
        <button
   className="group mt-12  bg-[#fefcfa] text-black px-10 py-3 rounded-full border
   hover:bg-black hover:text-white
-  transition-all duration-500 flex items-center justify-center gap-2"
+  transition-all duration-500 flex items-center justify-center gap-2  cursor-pointer"
 >
   <span>View All Services</span>
   

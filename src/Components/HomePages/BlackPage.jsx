@@ -66,10 +66,10 @@ const BlackPage = () => {
 
           {/* Buttons */}
           <div className="gap-4 mt-9 flex flex-col sm:flex-row justify-center md:justify-start items-center">
-            <button className="border-[#d4af37] border-2 text-[#d4af37] rounded-4xl hover:bg-[#d4af37] py-2 px-4 font-medium flex gap-2 justify-center items-center hover:text-black hover:shadow-2xl shadow-amber-300 transition-all duration-500">
+            <button className="border-[#d4af37] border-2 text-[#d4af37] rounded-4xl hover:bg-[#d4af37] py-2 px-4 font-medium flex gap-2 justify-center items-center hover:text-black hover:shadow-2xl shadow-amber-300 transition-all duration-500  cursor-pointer">
               Request Invitation <FaPlus />
             </button>
-            <button className="bg-[#d4af37] py-2.5 px-5 rounded-4xl font-medium flex gap-2 justify-center items-center transition-all duration-500 hover:bg-amber-300 hover:shadow-2xl shadow-amber-300">
+            <button className="bg-[#d4af37] py-2.5 px-5 rounded-4xl font-medium flex gap-2 justify-center items-center transition-all duration-500 hover:bg-amber-300 hover:shadow-2xl shadow-amber-300  cursor-pointer">
               Learn More <IoInformationCircleOutline className="font-medium text-xl mt-1"/>
             </button>
           </div>

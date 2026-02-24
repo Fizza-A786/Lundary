@@ -48,7 +48,7 @@ const Garment = () => {
       </div>
       <div className="flex justify-center mt-12 ">
         <button className="group bg-[#e1b933] text-black px-5 py-4 rounded-full
-          flex items-center gap-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl ">
+          flex items-center gap-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer">
        Continue to Garment Selection
         </button>
       </div>

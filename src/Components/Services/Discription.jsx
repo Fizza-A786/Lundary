@@ -19,7 +19,7 @@ const Discription = () => {
         </p>
 
         {/* Button */}
-        <button className="mt-10 bg-[#d4af37] text-black font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg gap-2 flex justify-center items-center">
+        <button className="mt-10 bg-[#d4af37] text-black font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg gap-2 flex justify-center items-center cursor-pointer">
           Contact Concierge <FaRegCommentDots className="text-[19px]"/>
         </button>
 

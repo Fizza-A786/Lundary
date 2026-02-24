@@ -61,7 +61,7 @@ const Products = () => {
             <button
               key={idx}
               onClick={() => setActiveFilter(filter)}
-              className={`text-sm font-semibold px-5 py-2 rounded-full transition-all duration-300 ${
+              className={`text-sm font-semibold px-5 py-2 rounded-full cursor-pointer transition-all duration-300 ${
                 activeFilter === filter
                   ? "bg-black text-white shadow-md"
                   : "bg-white text-gray-800 shadow hover:bg-gray-100"
@@ -106,7 +106,7 @@ const Products = () => {
                 </p>
               </div>
 
-              <button className="mt-6 w-full bg-[#d4af37] py-3 rounded-lg text-sm font-semibold text-black hover:bg-black hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2">
+              <button className="mt-6 w-full bg-[#d4af37] py-3 rounded-lg text-sm font-semibold text-black hover:bg-black hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
                 Order <GoPlus />
               </button>
             </div>

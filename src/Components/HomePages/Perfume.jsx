@@ -86,7 +86,7 @@ const Perfume = () => {
                 </span>
               </div>
               <div className="mt-4">
-                <button className="py-1 px-5.5 text-white bg-[#e5be3c] rounded-3xl">
+                <button className="py-1 px-5.5 text-white bg-[#e5be3c] rounded-3xl  cursor-pointer">
                     Add
                 </button>
               </div>
