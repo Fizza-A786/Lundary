@@ -1,13 +1,14 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/CommonPages/Navbar";
-import HomePage from "./Components/Pages/HomePages";
-import Services from "./Components/Pages/Services";
+import HomePage from "./Pages/HomePages";
+import Services from "./Pages/Services";
 import Footer from "./Components/HomePages/Footer";
-import LoginPage from "./Components/Pages/LoginPage";
-import SignupPage from "./Components/Pages/SignupPage";
-import BookNowPage from "./Components/Pages/BookNowPage";
-import AboutPage from "./Components/Pages/AboutPage";
+import LoginPage from "./Pages/LoginPage";
+import SignupPage from "./Pages/SignupPage";
+import BookNowPage from "./Pages/BookNowPage";
+import AboutPage from "./Pages/AboutPage";
+import Contactus from "./Pages/Contactus";
 
 const App = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} /> 
         <Route path="/Services" element={<Services />} /> 
         <Route path="/About" element={<AboutPage/>} /> 
+        <Route path="/contactus" element={<Contactus/>} /> 
         <Route path="/login" element={<LoginPage />} /> 
         <Route path="/signup" element={<SignupPage />} /> 
         <Route path="/Booknow" element={<BookNowPage/>} /> 

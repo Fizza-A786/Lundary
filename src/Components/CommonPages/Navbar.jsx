@@ -63,7 +63,7 @@ const Navbar = () => {
               Vision & Mission
             </li>
           </Link>
-          <Link to="/Contact">
+          <Link to="/contactus">
             <li className="text-[16px] text-white hover:text-[#e4bc3b] transition-all hover:scale-105 cursor-pointer">
               Contact
             </li>
@@ -126,7 +126,7 @@ const Navbar = () => {
             <Link to="/VisionMission">
               <li className="hover:text-[#d4af37]">Vision & Mission</li>
             </Link>
-            <Link to="/Contact">
+            <Link to="/contactus">
               <li className="hover:text-[#d4af37]">Contact</li>
             </Link>
           </ul>
