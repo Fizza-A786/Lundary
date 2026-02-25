@@ -19,17 +19,17 @@ const Hero = () => {
     },
     {
       id: 2,
-      image: "https://lundary.vercel.app/home/pCollection.jpg",
-      title: "Luxury Laundry Services",
-      description: "Tailored to your garment's needs",
+      image: "https://lundary.vercel.app/home/exectiveCollection.jpg",
+      title: "Professional Care",
+      description: "Expert fabric handling with eco-friendly detergents",
       buttonText: "Book a Collection",
       buttonLink: "#",
     },
     {
       id: 3,
-      image: "https://lundary.vercel.app/home/expert.jpg",
-      title: "Precision Fabric Care",
-      description: "Tailored to your garment's needs",
+      image: "https://lundary.vercel.app/home/eco.jpg",
+      title: "Express Service",
+      description: "Quick turnaround without compromising quality",
       buttonText: "Book a Collection",
       buttonLink: "#",
     },
@@ -42,7 +42,7 @@ const Hero = () => {
         spaceBetween={0}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         className="h-full"
       >
@@ -57,24 +57,19 @@ const Hero = () => {
 
               {/* Content */}
               <div className="relative text-center px-6 md:px-10 max-w-xl md:max-w-2xl lg:max-w-3xl flex flex-col items-center justify-center">
-                <h2 className="text-3xl md:text-5xl font-light mb-4 font-monoCustom text-white">
+                <h2 className="text-3xl md:text-5xl font-light mb-3 font-monoCustom text-white">
                   {slide.title}
                 </h2>
                 <div className="flex items-center gap-3 ">
 
                
-                  <div className="h-px w-16 bg-[#d4af37] -mt-4"></div>
-                <p className="text-lg md:text-2xl mb-6 font-monoCustom text-[#d4af37]">
+               
+                <p className="text-lg md:text-[18px] mb-5 font-monoCustom text-[#d4af37]">
                   {slide.description}
                 </p>
-                  <div className="h-px w-16 bg-[#d4af37] -mt-4"></div>
+                 
                    </div>
-                <a
-                  href={slide.buttonLink}
-                  className="bg-[#d4af37] hover:bg-[#c5a22d] text-black px-6 py-3 rounded-4xl text-[15px] font-medium transition duration-300 transform hover:scale-105 hover:shadow-lg"
-                >
-                  {slide.buttonText}
-                </a>
+                    <div className="h-px w-25 bg-[#d4af37] mt-4 "></div>
               </div>
             </div>
           </SwiperSlide>

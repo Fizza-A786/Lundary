@@ -29,8 +29,11 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navbarBg =
-    windowWidth < 768
+  // --- Compute navbar background dynamically ---
+  const navbarColor =
+    location.pathname === "/VisionMission"
+      ? "bg-black backdrop-blur-md shadow-md"
+      : windowWidth < 768
       ? "bg-black/90 backdrop-blur-md"
       : scrolled
       ? "bg-black/25 backdrop-blur-md shadow-md"
@@ -38,9 +41,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full border-b border-white/5 z-50 flex items-center justify-between px-6 lg:px-16 h-20 transition-all duration-500 ${navbarBg}`}
+        className={`fixed top-0 left-0 w-full border-b border-white/5 z-50 flex items-center justify-between px-6 lg:px-16 h-20 transition-all duration-500 ${navbarColor}`}
       >
         <div className="h-16 w-16 flex items-center justify-center">
           <img
