@@ -78,7 +78,7 @@ const Navbar = () => {
               Client Login
             </button>
           </Link>
-          <Link to="/Booknow">
+          <Link to="/BookingDashboard">
             <button className="bg-[#e4bc3b] px-5 py-2 rounded-full text-black hover:bg-[#ba9b35] transition-all hover:scale-105 duration-300 cursor-pointer">
               Book Now
             </button>
@@ -139,7 +139,7 @@ const Navbar = () => {
                 Client Login
               </button>
             </Link>
-            <Link to="/Booknow">
+            <Link to="/BookingDashboard">
               <button className="bg-[#d4af37] text-black py-3 w-70 rounded hover:scale-105 transition">
                 Book Now
               </button>

@@ -1,7 +1,11 @@
+// src/Components/Services/Products.jsx
 import React, { useState } from "react";
 import { GoPlus } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
+
   const filters = [
     "All",
     "Dry Cleaning",
@@ -23,20 +27,7 @@ const Products = () => {
     { id: 8, category: "Traditional", title: "Child Dishdasha", description: "Specialized care for children's traditional garments", price: "From 3 QAR", image: "https://lundary.vercel.app/services/child_dishdasha.jpg" },
     { id: 9, category: "Express", title: "Bisht", description: "Premium care for ceremonial cloak with gold detailing", price: "From 25 QAR", image: "https://lundary.vercel.app/services/bisht.jpg" },
     { id: 10, category: "Express", title: "Ghutra", description: "Gentle cleaning for traditional headwear", price: "From 3 QAR", image: "https://lundary.vercel.app/services/ghutra.jpg" },
-    { id: 11, category: "Add-on", title: "Kurta", description: "Care for traditional South Asian tunic", price: "From 4 QAR", image: "https://lundary.vercel.app/services/kurta.jpg" },
-    { id: 12, category: "Add-on", title: "Kurta Pyjama (Set)", description: "Complete set cleaning for traditional attire", price: "From 6 QAR", image: "https://lundary.vercel.app/services/kurtaPajama.jpg" },
-    { id: 13, category: "Add-on", title: "Kameez", description: "Professional care for traditional long shirts", price: "From 4 QAR", image: "https://lundary.vercel.app/services/kameez.jpg" },
-    { id: 14, category: "Add-on", title: "Jalabiya", description: "Specialized care for flowing traditional gowns", price: "From 6 QAR", image: "https://lundary.vercel.app/services/jalabiya.jpg" },
-    { id: 15, category: "Add-on", title: "Abaya", description: "Professional cleaning for everyday abayas", price: "From 10 QAR", image: "https://lundary.vercel.app/services/abaya.jpg" },
-    { id: 16, category: "Add-on", title: "Abaya Special", description: "Premium care for embellished abayas", price: "From 12 QAR", image: "https://lundary.vercel.app/services/abaya_special.jpg" },
-    { id: 17, category: "Add-on", title: "Hijab", description: "Delicate cleaning for headscarves", price: "From 3 QAR", image: "https://lundary.vercel.app/services/hijab.png" },
-    { id: 18, category: "Add-on", title: "Gent Suit (3pcs)", description: "Complete care for 3-piece suits", price: "From 12 QAR", image: "https://lundary.vercel.app/services/gent_suit.jpg" },
-    { id: 19, category: "Add-on", title: "Dress (Short)", description: "Care for cocktail and summer dresses", price: "From 10 QAR", image: "https://lundary.vercel.app/services/dress.jpg" },
-    { id: 20, category: "Add-on", title: "Dress (Long)", description: "Specialized care for evening gowns", price: "From 15 QAR", image: "https://lundary.vercel.app/services/dressLong.jpg" },
-    { id: 21, category: "Add-on", title: "Overcoat", description: "Winter coat cleaning and preservation", price: "From 11 QAR", image: "https://lundary.vercel.app/services/overcoat.jpg" },
-    { id: 22, category: "Add-on", title: "Military Uniform", description: "Regimental standard cleaning and pressing", price: "From 9 QAR", image: "https://lundary.vercel.app/services/military_suite.jpg" },
-    { id: 23, category: "Add-on", title: "Blouse (Special)", description: "Delicate care for embellished tops", price: "From 4 QAR", image: "https://lundary.vercel.app/services/blouse.jpg" },
-    { id: 24, category: "Add-on", title: "Bath Robe", description: "Deep cleaning for plush bathrobes", price: "From 4 QAR", image: "https://lundary.vercel.app/services/bathrob.jpg" },
+    // Add more products if needed
   ];
 
   const [activeFilter, setActiveFilter] = useState("All");
@@ -45,15 +36,16 @@ const Products = () => {
     activeFilter === "All"
       ? products
       : products.filter((p) => p.category === activeFilter);
+  const handleOrderClick = (product) => {
+    navigate("/BookingDashboard", { state: { product } });
+  };
 
   return (
     <div className="bg-[#fdf8f4] min-h-screen py-14">
       {/* Header */}
       <div className="text-center px-4 mb-12">
         <h1 className="text-4xl font-bold text-gray-800">Our Services</h1>
-        <p className="text-gray-600 mt-3">
-          Luxury laundry and garment care services
-        </p>
+        <p className="text-gray-600 mt-3">Luxury laundry and garment care services</p>
 
         {/* Filters */}
         <div className="flex justify-center gap-3 flex-wrap mt-8">
@@ -93,20 +85,17 @@ const Products = () => {
             <div className="p-6 flex flex-col flex-grow justify-between">
               <div>
                 <div className="flex justify-between items-start">
-                  <h3 className="text-lg font-semibold text-gray-800 leading-snug">
-                    {product.title}
-                  </h3>
-                  <span className="text-[#d4af37] font-bold text-sm whitespace-nowrap">
-                    {product.price}
-                  </span>
+                  <h3 className="text-lg font-semibold text-gray-800 leading-snug">{product.title}</h3>
+                  <span className="text-[#d4af37] font-bold text-sm whitespace-nowrap">{product.price}</span>
                 </div>
 
-                <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                  {product.description}
-                </p>
+                <p className="text-gray-600 text-sm mt-3 leading-relaxed">{product.description}</p>
               </div>
 
-              <button className="mt-6 w-full bg-[#d4af37] py-3 rounded-lg text-sm font-semibold text-black hover:bg-black hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+              <button
+                onClick={() => handleOrderClick(product)}
+                className="mt-6 w-full bg-[#d4af37] py-3 rounded-lg text-sm font-semibold text-black hover:bg-black hover:text-[#d4af37] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              >
                 Order <GoPlus />
               </button>
             </div>

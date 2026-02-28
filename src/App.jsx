@@ -5,11 +5,11 @@ import HomePage from "./Pages/HomePages";
 import Services from "./Pages/Services";
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
-import BookNowPage from "./Pages/BookNowPage";
 import AboutPage from "./Pages/AboutPage";
 import Contactus from "./Pages/Contactus";
 import Footer from "./Components/CommonPages/Footer";
 import VisionMission from "./Pages/VisionMission";
+import BookingDashboard from "./Dashboard/BookingDashboard";
 
 const App = () => {
   const location = useLocation();
@@ -27,7 +27,8 @@ const App = () => {
         <Route path="/contactus" element={<Contactus/>} /> 
         <Route path="/login" element={<LoginPage />} /> 
         <Route path="/signup" element={<SignupPage />} /> 
-        <Route path="/Booknow" element={<BookNowPage/>} /> 
+        <Route path="/BookingDashboard" element={<BookingDashboard/>} /> 
+
       </Routes>
 
       {!hideNavFooter && <Footer/>} 
