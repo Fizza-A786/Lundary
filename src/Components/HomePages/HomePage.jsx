@@ -8,8 +8,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import './swiper-custom.css';
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+ const  navigate = useNavigate();
   const slides = [
     {
       id: 1,
@@ -61,8 +63,10 @@ const HomePage = () => {
                   {slide.title}
                 </h2>
                 <p className="text-lg md:text-2xl mb-6 font-monoCustom text-[#d4af37]">{slide.description}</p>
-                <a
-                  href={slide.buttonLink}
+                <a  onClick={() => {
+                    console.log("booking start");
+                    navigate("/BookingDashboard");
+                  }}
                   className="bg-[#d4af37] hover:bg-[#c5a22d] text-black px-6 py-3 rounded-4xl text-[15px] font-medium transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 >
                   {slide.buttonText}

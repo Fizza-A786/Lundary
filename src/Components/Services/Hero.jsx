@@ -5,14 +5,16 @@ import { Pagination, Autoplay } from "swiper/modules";
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import './swiper-custom.css';
+import "./swiper-custom.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Hero = () => {
+const  navigate = useNavigate()
   const slides = [
     {
       id: 1,
       image: "https://lundary.vercel.app/home/eco.jpg",
-      title: "Tailored to your garment's needs",
+      title: "Premium Garment Care",
       description: "Expert cleaning for your most delicate fabrics",
       buttonText: "Book a Collection",
       buttonLink: "#",
@@ -61,16 +63,18 @@ const Hero = () => {
                   {slide.title}
                 </h2>
                 <div className="flex items-center gap-3 ">
-
-               
                   <div className="h-px w-16 bg-[#d4af37] -mt-4"></div>
-                <p className="text-lg md:text-2xl mb-6 font-monoCustom text-[#d4af37]">
-                  {slide.description}
-                </p>
+                  <p className="text-lg md:text-2xl mb-6 font-monoCustom text-[#d4af37]">
+                    {slide.description}
+                  </p>
                   <div className="h-px w-16 bg-[#d4af37] -mt-4"></div>
-                   </div>
+                </div>
                 <a
-                  href={slide.buttonLink}
+               
+                  onClick={() => {
+                    console.log("booking start");
+                    navigate("/BookingDashboard");
+                  }}
                   className="bg-[#d4af37] hover:bg-[#c5a22d] text-black px-6 py-3 rounded-4xl text-[15px] font-medium transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 >
                   {slide.buttonText}

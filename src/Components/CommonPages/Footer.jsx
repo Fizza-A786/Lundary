@@ -2,8 +2,10 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 import { IoLocationOutline, IoCallOutline, IoMailOutline } from "react-icons/io5";
 import { GrFormNext } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   const services = [
     "Premium Laundry",
     "Dry Cleaning",
@@ -58,6 +60,9 @@ const Footer = () => {
               >
                 <GrFormNext className="text-[#d4af37]" />
                 <a
+                 onClick={() => {
+                    navigate("/Services");
+                  }}
                   href="#"
                   className="text-gray-300 hover:text-yellow-500 transition-colors duration-300"
                 >

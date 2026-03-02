@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BsHandbagFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const FinalTouch = () => {
   const [activeCard, setActiveCard] = useState(null);
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -122,6 +124,10 @@ const FinalTouch = () => {
           className="group mt-12 bg-black text-white px-10 py-3 rounded-full border
           hover:shadow-amber-100 shadow-2xl hover:scale-105
           transition-all duration-500 flex items-center justify-center gap-2 cursor-pointer"
+          onClick={() => {
+                    console.log("booking start");
+                    navigate("/BookingDashboard");
+                  }}
         >
           <span>Book Your Order</span>
           <BsHandbagFill

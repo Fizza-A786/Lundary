@@ -1,6 +1,7 @@
 import { MdArrowForwardIos } from "react-icons/md";
 import { IoArrowForward } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const cards = [
   {
@@ -33,6 +34,7 @@ const cards = [
 ];
 
 const SigProduct = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full py-16 bg-[#fefcfa] flex justify-center">
       
@@ -78,6 +80,10 @@ const SigProduct = () => {
                   className="group mt-6 bg-[#d4af37] text-black py-2 px-7 rounded-full 
                   hover:bg-black hover:text-amber-400
                   transition-all duration-500 flex items-center gap-2 w-fit  cursor-pointer"
+                   onClick={() => {
+                    console.log("booking start");
+                    navigate("/Services");
+                  }}
                 >
                   {card.buttonText}
                   <MdArrowForwardIos className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
@@ -93,6 +99,10 @@ const SigProduct = () => {
   className="group mt-12  bg-[#fefcfa] text-black px-10 py-3 rounded-full border
   hover:bg-black hover:text-white
   transition-all duration-500 flex items-center justify-center gap-2  cursor-pointer"
+    onClick={() => {
+                    console.log("booking start");
+                    navigate("/Services");
+                  }}
 >
   <span>View All Services</span>
   

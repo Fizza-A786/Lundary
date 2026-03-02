@@ -1,7 +1,9 @@
 import React from "react";
 import { FaRegCommentDots } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Discription = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-[#151515]  py-20 px-6">
       <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
@@ -19,7 +21,13 @@ const Discription = () => {
         </p>
 
         {/* Button */}
-        <button className="mt-10 bg-[#d4af37] text-black font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg gap-2 flex justify-center items-center cursor-pointer">
+        <button
+      onClick={() => {
+                    console.log("booking start");
+                    navigate("/contactus");
+                  }}  
+        className="mt-10 bg-[#d4af37] text-black font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg gap-2 flex justify-center items-center cursor-pointer"
+        >
           Contact Concierge <FaRegCommentDots className="text-[19px]"/>
         </button>
 

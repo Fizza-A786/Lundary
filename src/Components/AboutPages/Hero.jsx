@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const slide = {
     image: "https://lundary.vercel.app/home/dryCleaning.jpg",
     title: "Luxury Laundry. Reimagined",
@@ -34,6 +36,10 @@ const Hero = () => {
 
           <a
             href={slide.buttonLink}
+            onClick={() => {
+                    console.log("booking start");
+                    navigate("/BookingDashboard");
+                  }}
             className="bg-[#d4af37] hover:bg-[#c5a22d] text-black px-6 py-3 rounded-4xl text-[15px] font-medium transition duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             {slide.buttonText}

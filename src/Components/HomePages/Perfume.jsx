@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Perfume = () => {
-
+    
+    const navigate = useNavigate();
   const services = [
     {
       id: 1,
@@ -86,7 +88,11 @@ const Perfume = () => {
                 </span>
               </div>
               <div className="mt-4">
-                <button className="py-1 px-5.5 text-white bg-[#e5be3c] rounded-3xl  cursor-pointer">
+                <button className="py-1 px-5.5 text-white bg-[#e5be3c] rounded-3xl  cursor-pointer "
+                onClick={() => {
+                    console.log("booking start");
+                    navigate("/BookingDashboard");
+                  }}>
                     Add
                 </button>
               </div>
